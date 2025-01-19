@@ -7,8 +7,9 @@
     font-family: 'Poppings',sans-serif;
     text-decoration: none;
     list-style: none; 
-   
+   width: 100%;
 }
+
 .hmskl{
     background-color: #333;
 }
