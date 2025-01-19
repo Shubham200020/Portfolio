@@ -145,5 +145,8 @@ span{
         box-sizing: border-box;
         font-family: 'Poppins',sans-serif;
     }
-
+    .about img{
+        border: none;
+        box-shadow: none;
+    }
 }
