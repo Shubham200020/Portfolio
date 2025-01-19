@@ -6,11 +6,12 @@ import { DatabaseSkillsComponent } from "../database-skills/database-skills.comp
 import { AboutComponent } from "../about/about.component";
 import { EducationComponent } from "../education/education.component";
 import { FormComponent } from "../form/form.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FormComponent],
+  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FormComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
