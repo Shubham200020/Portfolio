@@ -5,7 +5,10 @@
     font-family: 'Roboto',sans-serif;
 }
 body{
-    background-color: #333;
+    background-image: linear-gradient(to top right,#333,black);
+    /* background-image: linear-gradient(to right, #333 , rgba(255, 255, 0, 0.328),rgb(127, 39, 7)); */
+    /* background-color: #333; */
+    /* background-color: #333; */
 }
 .inner{
     padding-top: 20px;

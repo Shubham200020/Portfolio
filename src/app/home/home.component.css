@@ -9,10 +9,13 @@
     list-style: none; 
    
 }
-
+.hmskl{
+    background-color: #333;
+}
 .home{
-  
-    background-color:rgb(241, 241, 241);
+    /* background-image: linear-gradient( rgb(241, 241, 241) , #333); */
+    background-image: linear-gradient(180deg, rgb(241, 241, 241), #333);
+    /* background-color:rgb(241, 241, 241); */
 }
 .nav{
     position: sticky;

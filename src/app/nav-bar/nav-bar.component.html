@@ -8,9 +8,12 @@
 </head>
 <body>
     <header class="header">
+       
+            <i class="fa fa-server menu" style="font-size:24px; color: linear-gradient(red, yellow);" (click)="menu()"></i>
+       
         <a href="#" class="logo"><span>SKM</span>Profile</a>
 
-        <nav class="navbar">
+        <nav class="navbar" *ngIf="visible">
             <a href="#home">Home</a>
             <a href="#skill">Skill</a>
             <a href="#about">About</a>
@@ -18,9 +21,15 @@
             <a href="#form">Form</a>
 
         </nav>
+    
       
-      
-        <i class="fa fa-server menu" style="font-size:24px; color: white;"></i>
+   
+
     </header>
+   <script>
+       function menu(){
+            alert("Hello")
+        }
+   </script>
 </body>
 </html>

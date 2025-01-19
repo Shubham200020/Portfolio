@@ -74,7 +74,8 @@
   }
 @media (max-width:900px){
     .menu{
-        display: none;
+        /* display: none; */
+        color: black;
     }
     .logo{
         font-size: 25px;
@@ -105,9 +106,6 @@
         align-items: center;
         z-index: 100;
     }
-   .navbar{
-    margin-bottom: 30px;
-   }
    .navbar a{
     
         font-size: 18px;
@@ -117,6 +115,9 @@
         border-bottom: 3px solid transparent;
         transition: 0.3s ease;
 
+    }
+    .navbarDis{
+        
     }
     .contact{
         right: 0%;
@@ -142,5 +143,40 @@
     .contact:hover{
         background-color: orangered;
         box-shadow: 0 0 25px orangered;
+    }
+}
+@media (max-width:600px){
+    .menu{
+        display: flex;
+    }
+    .header{
+        background-color: #333;
+        opacity: 0.9;
+      text-align: center;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        padding: 35px 12%;
+        backdrop-filter: blur(10px);
+        display: block;
+        justify-content: space-between;
+       
+        z-index: 100;
+    }
+  
+   .navbar{
+    width: 100%;
+    display: block;
+   }
+    .navbar a{
+        color: #f6f5f5;
+        font-size: larger;
+        width: 100%;
+        padding: 8px 16px;
+        display: block;
+    }
+    .navbar a:hover{
+        background-color: #555;
+     
     }
 }

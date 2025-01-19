@@ -5,7 +5,9 @@
     font-family: 'Roboto',sans-serif;
 }
 body{
-    background-color: #333;
+    background-image: linear-gradient(to top left,black,#333);
+
+    /* background-color: #333; */
 }
 .inner{
     padding-top: 20px;
