@@ -92,3 +92,8 @@ footer{
     margin: 0px 5px;
  }
 }
+@media (max-width:600px){
+    .footerBottom{
+        font-size: 12px;
+    }
+}
