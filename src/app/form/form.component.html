@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
 </head>
 <body>
     <section id="form" class="contact">
         <h2>Contact Me</h2>
-        <form action="">
+      
+        <form [formGroup]="form" (ngSubmit)="submit(form)">
             <div class="input-box">
                 <div class="input-field field">
-                    <input type="text" name="" placeholder="Enter Full Name" id=""
+                    <input type="text" name="" placeholder="Enter Full Name" formControlName="name"
                     class="item" autocomplete="off">
 
 
                 </div>
             
                 <div class="input-field field">
-                    <input type="email" name="" placeholder="Enter Email Id" id=""
+                    <input type="email" name="" placeholder="Enter Email Id" formControlName="email"
                     class="item" autocomplete="off">
                     
 
@@ -28,25 +29,33 @@
 
             <div class="input-box">
                 <div class="input-field field">
-                    <input type="text"  placeholder="Enter Phone" id=""
+                    <input type="text"  placeholder="Enter Phone" formControlName="phone"
                     class="item" autocomplete="off">
 
 
                 </div>
             
                 <div class="input-field field">
-                    <input type="text" name="" placeholder="Enter Subject" id=""
+                    <input type="text" name="" placeholder="Enter Subject" formControlName="subject"
                     class="item" autocomplete="off">
                     
 
                 </div>
             </div>
             <div class="textarea-field field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Enter Messange" class="item" autocomplete="off"></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Enter Messange" class="item" autocomplete="off" formControlName="contant"></textarea>
             </div>
             <button type="submit">Send Messege</button>
+          
         </form>
        
+        <div class="alert" *ngIf="dsp">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Server issue</strong> There was a problem processing your request. Please Send Me Mail
+          </div>
+     
     </section>
+  
 </body>
+
 </html>

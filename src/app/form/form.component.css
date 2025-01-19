@@ -9,12 +9,33 @@
 body{
     display: flex;
     justify-content: center;
+
     align-items: center;
     min-height: 100%;
     /* background-image: linear-gradient( #191919,blue); */
 
-    background-image: linear-gradient(to left, #191919,#333, #191919);
+    /* background-image: linear-gradient( #333, #333,); */
 }
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
 .contact h2 {
    font-size: 40px;
    color: #ededed;
@@ -25,11 +46,12 @@ body{
 .contact form{
     width: 600px;
     text-align: center;
-
+   margin-left: 5%;
 }
 form .input-box {
     display: flex;
     justify-content: space-between;
+   
 
 }
 .field .item {
@@ -104,6 +126,8 @@ form button:hover {
         box-sizing: border-box;
         font-family: 'Poppins',sans-serif;
     }
-  
+    form .input-box{
+        display: block;
+    }
     
 }
