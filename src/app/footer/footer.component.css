@@ -75,6 +75,9 @@ footer{
    font-weight: 400;
    margin: 0px 5px;
 }
+.footerBottom{
+    font-size: 12px;
+}
 @media (max-width:700px){
    .footerNav ul{
    flex-direction: column;
