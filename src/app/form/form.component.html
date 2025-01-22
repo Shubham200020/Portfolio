@@ -48,14 +48,17 @@
             <button type="submit">Send Messege</button>
           
         </form>
-       
+       <div>
+        {{data}}
+       </div>
+
         <div class="alert" *ngIf="dsp">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
             <strong>Server issue</strong> There was a problem processing your request. Please Send Me Mail
           </div>
      
     </section>
-  
+ 
 </body>
 
 </html>
