@@ -48,6 +48,9 @@ body{
     text-align: center;
    margin-left: 5%;
 }
+.alt{
+    color: red;
+}
 form .input-box {
     display: flex;
     justify-content: space-between;

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import * as XLSX from 'xlsx';
 @Component({
   selector: 'app-form',
@@ -12,34 +12,37 @@ import * as XLSX from 'xlsx';
 })
 export class FormComponent {
   dsp:boolean=false
-  data:any=[]
+ hd:boolean=false;
   constructor( private http: HttpClient){
-    this.getData()
+   // this.getData()
   }
   form:FormGroup=new FormGroup({
     id:new FormControl(null),
-    name:new FormControl(''),
-    email:new FormControl(''),
-    phone:new FormControl(''),
-    subject:new FormControl(''),
-    contant:new FormControl('')
+    name:new FormControl('',[Validators.required,Validators.pattern('[A-Z a-z]*')]),
+    email:new FormControl('',[Validators.required,Validators.email]),
+    phone:new FormControl('',[Validators.required,Validators.pattern('[0-9]*'),Validators.maxLength(10),Validators.minLength(10)]),
+    subject:new FormControl('',[Validators.required]),
+    messege:new FormControl('',[Validators.required,Validators.maxLength(220)])
   })
-  getData(){
-    this.http.get("https://profilebalckend-production.up.railway.app/data").subscribe(
-      (data)=>{
-        this.data=data
-        alert("Hello")
-        //alert("Submit Data Successfully")
-
-      },
-      (error)=>{
-        console.log(error)
-       // this.dsp=true
-
-      }
-    )
+  get getName(){
+    return this.form.get('name')
   }
   
+  get getEmail(){
+    return this.form.get('email')
+  }
+
+  get getPhone(){
+    return this.form.get('phone')
+  }
+
+  get getSubject(){
+    return this.form.get('subject')
+  }
+  get getMessege(){
+    return this.form.get('messege')
+  }
+
   submit(fmdata:FormGroup){
    if(fmdata.valid){
     this.http.post("https://profilebalckend-production.up.railway.app/data/insert",fmdata.value).subscribe(
@@ -49,11 +52,14 @@ export class FormComponent {
       },
       (error)=>{
         console.log(error)
-        alert("issue")
+        alert("Issue In Server")
         this.dsp=true
 
       }
     )
+   }
+   else{
+    this.hd=true
    }
   }
 }

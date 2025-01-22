@@ -14,16 +14,25 @@
                 <div class="input-field field">
                     <input type="text" name="" placeholder="Enter Full Name" formControlName="name"
                     class="item" autocomplete="off">
-
+                    <div class="alt">
+                        <span *ngIf="hd && getName?.errors?.['required']">Name Req*</span>
+                        <span *ngIf="getName?.errors?.['pattern']">Enter Valid Name*</span>
+                    </div>
 
                 </div>
-            
+           
                 <div class="input-field field">
                     <input type="email" name="" placeholder="Enter Email Id" formControlName="email"
                     class="item" autocomplete="off">
-                    
+                   
+                    <div class="alt">
+                        <span class="alt" *ngIf="hd && getEmail?.errors?.['required']">Email Req*</span>
+                        <span class="alt" *ngIf="getEmail?.errors?.['email']">Email Valid Email*</span>
+                    </div>
 
                 </div>
+                
+               
             </div>
 
 
@@ -32,24 +41,36 @@
                     <input type="text"  placeholder="Enter Phone" formControlName="phone"
                     class="item" autocomplete="off">
 
-
+                    <div class="alt">
+                        <span class="alt" *ngIf="hd && getPhone?.errors?.['required']">Phone Req*</span>
+                        <span class="alt" *ngIf="getPhone?.errors?.['pattern']">Enter Valid Phone Number*</span>
+                        <span class="alt" *ngIf="getPhone?.errors?.['maxlength']">Enter Valid Phone Number*</span>
+                        <span class="alt" *ngIf="getPhone?.errors?.['minlength']">Enter Valid Phone Number*</span>
+                    </div>
                 </div>
             
                 <div class="input-field field">
                     <input type="text" name="" placeholder="Enter Subject" formControlName="subject"
                     class="item" autocomplete="off">
-                    
+                    <div class="alt">
+                        <span class="alt" *ngIf="hd && getPhone?.errors?.['required']">Subject Req*</span>
+                    </div>
 
                 </div>
             </div>
             <div class="textarea-field field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Enter Messange" class="item" autocomplete="off" formControlName="contant"></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Enter Messange" class="item" autocomplete="off" formControlName="messege"></textarea>
+                <div class="alt">
+                    <span class="alt" *ngIf="hd && getMessege?.errors?.['required']">Messege Req*</span>
+                    <span class="alt" *ngIf="getMessege?.errors?.['maxlength']">Messege's Length is more then 220*</span>
+
+                </div>
             </div>
             <button type="submit">Send Messege</button>
           
         </form>
        <div>
-        {{data}}
+     
        </div>
 
         <div class="alert" *ngIf="dsp">
