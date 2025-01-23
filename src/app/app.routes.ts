@@ -4,7 +4,7 @@ import { ShowDataComponent } from './show-data/show-data.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
-    {path:"showdata",component:ShowDataComponent}
+    {path:"https://skmprofile/.netlify.app/showdata",component:ShowDataComponent}
 
     
 ];
