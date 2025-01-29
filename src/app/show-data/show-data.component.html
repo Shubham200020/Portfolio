@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
 </head>
 <body>
-    
-        
-      <div>
-       
-        <div class="astrologer-list">
-            <div class="astrologer" *ngFor="let i Of data">
-              <!-- <img  alt="Astrologer Image" class="astrologer-image" [src]="'data:image/jpeg;base64,'+i.poster.imageData" /> -->
-              <div class="astrologer-details">
-                <h3>Name:{{i.name}}</h3>
-                <p>Subject:{{i.subject}}</p>
-               
-              </div>
-              <div class="astrologer-actions cl">
-              
-              
-                <button class="btn-delete btn btn-danger" (click)="deleteData(i)">Delete</button>
-              </div>
-            </div>
-          </div>
-    
-      </div>
-    
+ <table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Subjects</th>
+    <th >Messege</th>
+  </tr>
+  <tr *ngFor="let i Of data">
+    <td>{{i.name}}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+ </table>
 </body>
 </html>
+    
+   

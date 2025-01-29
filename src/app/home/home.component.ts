@@ -7,22 +7,25 @@ import { AboutComponent } from "../about/about.component";
 import { EducationComponent } from "../education/education.component";
 import { FormComponent } from "../form/form.component";
 import { FooterComponent } from "../footer/footer.component";
+import { CommonModule } from '@angular/common';
+import { ShowDataComponent } from "../show-data/show-data.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FormComponent, FooterComponent],
+  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FormComponent, FooterComponent, CommonModule, ShowDataComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  admin:boolean=true
   constructor(){
     
   }
+  getAdmin(){
+    this.admin=!this.admin;
+  }
   openInNewTab(){
-    // window.open("www.google.com",'_blank')
-    
-    // window.open("https://www.google.com")
     window.open("mailto:shubhammisra800@gmail.com")
    
   }

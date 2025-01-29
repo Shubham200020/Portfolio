@@ -29,7 +29,7 @@
                </p>
             <div class="bnt-box">
                 <button class="btn-2" (click)="openInNewTab()">Send Email <i class="fa fa-envelope"></i></button>
-                <!-- <button class="btn-1">Experience</button> -->
+                <button class="btn-1" (click)="getAdmin()">Admin Work Space</button>
 
             </div>
         </div>
@@ -37,12 +37,15 @@
             <img src="Skills/shubham3-rm.png">
           </div>
     </section>
-    <section class="skill" id="skill">
+    <section class="skill" id="skill" *ngIf="admin">
       <app-frontend-skill></app-frontend-skill>
       <app-backend-skill></app-backend-skill>
       <app-database-skills></app-database-skills>
     </section>
-
+     <section  id="skill" *ngIf="!admin">
+      
+    <app-show-data></app-show-data>
+    </section> 
 
     <app-education></app-education>
     <app-form></app-form>

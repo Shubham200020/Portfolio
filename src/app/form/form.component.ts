@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import * as XLSX from 'xlsx';
 @Component({
@@ -10,11 +10,15 @@ import * as XLSX from 'xlsx';
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
-export class FormComponent {
-  dsp:boolean=false
+export class FormComponent implements OnInit{
+  dsp:boolean=false;
+  submits:string="Send Messege"
  hd:boolean=false;
   constructor( private http: HttpClient){
    // this.getData()
+  }
+  ngOnInit(): void {
+    this.submits="Send Messege"
   }
   form:FormGroup=new FormGroup({
     id:new FormControl(null),
@@ -44,17 +48,20 @@ export class FormComponent {
   }
 
   submit(fmdata:FormGroup){
+    
    if(fmdata.valid){
+    this.submits="Sending..."
     this.http.post("https://profilebalckend-production.up.railway.app/data/insert",fmdata.value).subscribe(
       (data)=>{
         alert("Submit Data Successfully")
-
+        this.ngOnInit()
       },
       (error)=>{
         console.log(error)
         alert("Issue In Server")
         this.dsp=true
-
+        
+        this.ngOnInit()
       }
     )
    }
