@@ -18,6 +18,7 @@ export class FormComponent implements OnInit{
    // this.getData()
   }
   ngOnInit(): void {
+    this.form
     this.submits="Send Messege"
   }
   form:FormGroup=new FormGroup({

@@ -9,11 +9,12 @@ import { FormComponent } from "../form/form.component";
 import { FooterComponent } from "../footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { ShowDataComponent } from "../show-data/show-data.component";
+import { LoginComponent } from "../login/login.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FormComponent, FooterComponent, CommonModule, ShowDataComponent],
+  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FormComponent, FooterComponent, CommonModule, ShowDataComponent, LoginComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
