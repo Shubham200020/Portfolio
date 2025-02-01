@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 })
 export class ShowDataComponent {
 
-  url:string="https://terrific-encouragement-production.up.railway.app"
+  url:string="https://profilebalckend-production.up.railway.app/data"
   data:any=[]
   constructor(private http:HttpClient){
   }
