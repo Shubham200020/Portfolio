@@ -27,7 +27,7 @@ export class FormComponent implements OnInit{
     email:new FormControl('',[Validators.required,Validators.email]),
     phone:new FormControl('',[Validators.required,Validators.pattern('[0-9]*'),Validators.maxLength(10),Validators.minLength(10)]),
     subject:new FormControl('',[Validators.required]),
-    messege:new FormControl('',[Validators.required,Validators.maxLength(220)])
+    messege:new FormControl('',[Validators.required,Validators.maxLength(400)])
   })
   get getName(){
     return this.form.get('name')
