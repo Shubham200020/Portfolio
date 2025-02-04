@@ -51,6 +51,9 @@ export class FormComponent implements OnInit{
   }
 
   submit(fmdata:FormGroup){
+   
+   if(fmdata.valid){
+    this.submits="Sending..."
     this.form=new FormGroup({
       id:new FormControl(null),
       name:new FormControl('',[Validators.required,Validators.pattern('[A-Z a-z]*')]),
@@ -59,9 +62,6 @@ export class FormComponent implements OnInit{
       subject:new FormControl('',[Validators.required]),
       messege:new FormControl('',[Validators.required,Validators.maxLength(400)])
     })
-   if(fmdata.valid){
-    this.submits="Sending..."
-
     this.http.post("https://profilebalckend-production.up.railway.app/data/insert",fmdata.value).subscribe(
       (data)=>{
         alert("Submit Data Successfully")
