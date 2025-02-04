@@ -13,14 +13,6 @@ import * as XLSX from 'xlsx';
 export class FormComponent implements OnInit{
   dsp:boolean=false;
   submits:string="Send Messege"
- hd:boolean=false;
-  constructor( private http: HttpClient){
-   // this.getData()
-  }
-  ngOnInit(): void {
-    this.form
-    this.submits="Send Messege"
-  }
   form:FormGroup=new FormGroup({
     id:new FormControl(null),
     name:new FormControl('',[Validators.required,Validators.pattern('[A-Z a-z]*')]),
@@ -28,7 +20,17 @@ export class FormComponent implements OnInit{
     phone:new FormControl('',[Validators.required,Validators.pattern('[0-9]*'),Validators.maxLength(10),Validators.minLength(10)]),
     subject:new FormControl('',[Validators.required]),
     messege:new FormControl('',[Validators.required,Validators.maxLength(400)])
-  })
+  });
+ hd:boolean=false;
+  constructor( private http: HttpClient){
+   // this.getData()
+  }
+  ngOnInit(): void {
+    this.form
+    this.submits="Send Messege"
+   
+  }
+ 
   get getName(){
     return this.form.get('name')
   }
@@ -49,9 +51,17 @@ export class FormComponent implements OnInit{
   }
 
   submit(fmdata:FormGroup){
-    
+    this.form=new FormGroup({
+      id:new FormControl(null),
+      name:new FormControl('',[Validators.required,Validators.pattern('[A-Z a-z]*')]),
+      email:new FormControl('',[Validators.required,Validators.email]),
+      phone:new FormControl('',[Validators.required,Validators.pattern('[0-9]*'),Validators.maxLength(10),Validators.minLength(10)]),
+      subject:new FormControl('',[Validators.required]),
+      messege:new FormControl('',[Validators.required,Validators.maxLength(400)])
+    })
    if(fmdata.valid){
     this.submits="Sending..."
+
     this.http.post("https://profilebalckend-production.up.railway.app/data/insert",fmdata.value).subscribe(
       (data)=>{
         alert("Submit Data Successfully")
