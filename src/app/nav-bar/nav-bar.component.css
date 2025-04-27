@@ -1,3 +1,21 @@
+.img{
+    height: 20px;
+    width: 20px;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 50%;
+
+}
+.img:hover{
+ 
+    box-shadow: 0 0 25px orangered;
+        transform: scale(1.1);
+}
+.logo:hover .img{
+    
+    box-shadow: 0 0 25px orangered;
+    transform: scale(1.1);
+}
 *{
     margin: 0;
     padding: 0;
@@ -20,14 +38,14 @@
         align-items: center;
         z-index: 100;
     }
-    .logo{
+    .logo {
         font-size: 25px;
         color: rgb(94, 49, 49);
         font-weight: 600;
         transition: 0.3s ease;
 
     }
-    .logo:hover{
+    .logo:hover {
         color: orangered;
         text-shadow: 0 0 25px orangered;
         transform: scale(1.1);
