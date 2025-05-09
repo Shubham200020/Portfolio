@@ -1,3 +1,15 @@
+.navbar a{
+    font-family: "Trirong", serif;
+    color: rgb(169, 188, 205);
+}
+.logo{
+    
+    font-family: "Audiowide", sans-serif;
+}
+.logo span{
+    
+    font-family: "Audiowide", sans-serif;
+}
 .img{
     height: 20px;
     width: 20px;
@@ -40,7 +52,7 @@
     }
     .logo {
         font-size: 25px;
-        color: rgb(94, 49, 49);
+        color: rgb(237, 228, 228);
         font-weight: 600;
         transition: 0.3s ease;
 
@@ -56,7 +68,7 @@
     
     .navbar a{
         font-size: 18px;
-        color: rgb(89, 89, 90);
+        
         font-weight: 500;
         margin:  0 20px;
         border-bottom: 3px solid transparent;
@@ -93,11 +105,12 @@
 @media (max-width:900px){
     .menu{
        
-        color: rgb(167, 71, 71);
+        color: rgb(237, 228, 228);
     }
     .logo{
+       
         font-size: 25px;
-        color: rgb(94, 49, 49);
+        color: rgb(237, 228, 228);
        
         font-weight: 600;
         transition: 0.3s ease;
@@ -112,20 +125,20 @@
         color: orangered;
     }
     .header1{
-      
+    
         top: 0%;
         left: 0;
         width: 100%;
         padding: 35px 12%;
         backdrop-filter: blur(10px);
         display: block;
-        justify-content: space-between;
+ 
         align-items: center;
-        z-index: 100;
+       
     }
     .navbar a{
         font-size: 18px;
-        color: rgb(89, 89, 90);
+      
         font-weight: 500;
         margin:  0 20px;
         border-bottom: 3px solid transparent;
@@ -137,7 +150,7 @@
     .contact{
         right: 0%;
         padding: 10px 18px;
-        background-color: white;
+        background-color: rgb(180, 129, 129);
         /* color: black; */
         margin-top: 30px;
        
@@ -188,7 +201,7 @@
    .navbar a{
     display: block;
     font-size: 28px;
-    color: rgb(89, 89, 90);
+  
     font-weight: 500;
     margin:  0 20px;
     border-bottom: 3px solid transparent;

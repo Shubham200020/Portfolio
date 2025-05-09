@@ -24,6 +24,14 @@ button{
     justify-content: space-around;
 }
 .about img{
+    -webkit-touch-callout:none;
+  
+    -webkit-user-select: none;
+    user-select: none;
+
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    user-select: none;
     user-select: none;
     border: 2px solid #f30a0a;
     box-shadow:0 0 5px #ba0d0d
