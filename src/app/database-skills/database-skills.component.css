@@ -162,5 +162,9 @@ body{
         background: rgba(100, 100, 100, 0.5);
         border-radius: 45px 0 0 45px;
     }
+    .skill-title h3{
+        font-size: small;
+     
+     }
     
 }
