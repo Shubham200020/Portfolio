@@ -15,6 +15,7 @@ button{
     margin-left: 20px;
 }
 .main{
+    user-select: none;
     width: 1200px;
     max-width: 95%;
     margin: 0 auto;
@@ -23,6 +24,7 @@ button{
     justify-content: space-around;
 }
 .about img{
+    user-select: none;
     border: 2px solid #f30a0a;
     box-shadow:0 0 5px #ba0d0d
     ,0 0 25px #f30a0a;

@@ -130,9 +130,37 @@ body{
 }
 @media (max-width:650px){
     .container{
+        grid-template-columns: repeat(3,1fr);
+        padding: 2rem 50px;
+
+    }
+    /* .container{
         grid-template-columns: 1fr;
 
 
+    } */
+    .img{
+        width: 70px;
+        height: 70px;
+        position: relative;
+        border-radius: 45px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    
+  
+    .img:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 70px;
+        background: rgba(100, 100, 100, 0.5);
+        border-radius: 45px 0 0 45px;
     }
     
 }
