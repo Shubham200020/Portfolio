@@ -23,7 +23,7 @@ button{
     align-items: center;
     justify-content: space-around;
 }
-.about img{
+.mnim{
     -webkit-touch-callout:none;
   
     -webkit-user-select: none;
@@ -42,14 +42,14 @@ button{
     transition: 0.5s ease;
 
 }
-.about img:hover{
+.mnim:hover{
     border: 2px solid #f30a0a;
     box-shadow:0 0 10px #f30a0a
     ,0 0 50px #f30a0a;
     height: auto;
     width: 50%;
     border-radius: 5em;
-    transition: 0.5s ease;
+    transition: 1s ease;
     
 }
 .about-text h1{
@@ -63,6 +63,9 @@ button{
     font-size: 28px;
     text-transform: 25px;
     margin-bottom: 0.4em;
+}
+.about-text{
+    text-align: center;
 }
 span{
     color: #f30a0a;
@@ -95,50 +98,52 @@ span{
     cursor: pointer;
     transform:scale(1.1) ;
 } */
-.linkdin{
+.cross{
     background: transparent;
-    color: white;
-    font-size: 16px;
-    background-color: #154bd4;
-    text-decoration: none;
-    border: 2px splid #154bd4;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 20px;
-    transition: .4s ease;
+    padding: 0%;
+    height: 100px;
+    border-radius: 20%;
+    transition: 0.6s ease;
 }
-.linkdin:hover{
-    background: #154bd4;
-     color: white;
-      border: 2px solid #154bd4;
-      box-shadow: 0 0 5px #154bd4,
-      0 0 25px #154bd4;
-      cursor: pointer;
-      transform:scale(1.1) ;
+.cross:hover{
+ border: 2px solid #100305;
+    box-shadow:0 0 10px #100405
+    ,0 0 50px #100505;
+    height: 104px;
+  
+    transition: 1s ease;
   }
-.github{
+  .pdf{
+    border-radius: 50%;
+    background-color: aliceblue;
+    text-align: center;
+    margin-left: 22px;
+  }
+  
+.CV{
     background: transparent;
-    color: #f30a0a;
-    font-size: 16px;
-    text-decoration: none;
-    border: 2px splid #524e4e;
-    font-weight: bold;
-    padding: 13px 30px;
-   border-radius: 20px;
-    transition: .4s ease;
+    padding: 0%;
+    height: 100px;
+    border-radius: 20%;
+    transition: 0.6s ease;
 }
-.github:hover{
-    background: transparent;
-    color: white;
-    font-size: 16px;
-    background-color: #3b3c3e;
-    text-decoration: none;
-    border: 2px splid #3b3c3e;
-    font-weight: bold;
-    padding: 13px 30px;
-    transform:scale(1.1) ;
-    transition: .4s ease;
+.CV:hover{
+    border: 2px solid #100305;
+    box-shadow:0 0 10px #100405
+    ,0 0 50px #100505;
+    height: 200px;
+  
+    transition: 1s ease;
 }
+.github:active{
+    transform: scale(-1,-1);
+   
+}
+
+/* .github:active img{
+    transform: scale(0.4s);
+} */
+
 @media (max-width:912px){
     .main{
         text-align: center;
