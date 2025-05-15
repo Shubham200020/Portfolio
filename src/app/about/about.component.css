@@ -114,6 +114,7 @@ span{
     transition: 1s ease;
   }
   .pdf{
+    width: 100%;
     border-radius: 100%;
     background-color: aliceblue;
     text-align: center;

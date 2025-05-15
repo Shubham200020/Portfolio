@@ -53,6 +53,7 @@ export class FormComponent implements OnInit{
   submit(fmdata:FormGroup){
    
    if(fmdata.valid){
+    
     this.submits="Sending..."
     this.form=new FormGroup({
       id:new FormControl(null),
