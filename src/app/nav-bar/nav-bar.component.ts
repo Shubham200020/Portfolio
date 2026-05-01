@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,26 +8,37 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'
 })
-export class NavBarComponent implements OnInit{
- windowWid:number
- visible:boolean=true
-  constructor(){
-    this.windowWid=window.innerWidth
+export class NavBarComponent implements OnInit {
+  mobileMenuOpen = false;
+  isMobile = false;
+  windowWidth: number = window.innerWidth;
 
-    console.log(this.windowWid)
-    if(this.windowWid<=600){
-      this.visible=false
-    }
+  constructor() {
+    this.updateScreenSize();
   }
+
   ngOnInit(): void {
-    this.windowWid=window.innerWidth
+    this.updateScreenSize();
+  }
 
-    console.log(this.windowWid)
-    if(this.windowWid<=600){
-      this.visible=false
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: any): void {
+    this.windowWidth = event.target.innerWidth;
+    this.updateScreenSize();
+    if (this.windowWidth > 768) {
+      this.mobileMenuOpen = false;
     }
   }
-  menu(){
-    this.visible=!this.visible
+
+  updateScreenSize(): void {
+    this.isMobile = this.windowWidth <= 768;
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
   }
 }

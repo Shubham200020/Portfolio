@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import * as XLSX from 'xlsx';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
   selector: 'app-form',
   standalone: true,
@@ -77,8 +76,12 @@ export class FormComponent implements OnInit{
       }
     )
    }
-   else{
+  else{
     this.hd=true
    }
+  }
+
+  closeAlert(){
+    this.dsp=false
   }
 }

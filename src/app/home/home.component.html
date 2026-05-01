@@ -1,57 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+<div class="nav">
+  <app-nav-bar></app-nav-bar>
+</div>
 
-   <div class="nav">
-    <app-nav-bar></app-nav-bar>
-   </div>
-
-
-  <div class="hmskl">
-    <section class="home" id="home">
-        <div class="home-container">
-            <h3>Hello</h3>
-            <h1>I'm <span>Shubham<br></span>
-            a Software Developer 
-            </h1>
-            <p>
-              Welcome to my corner of the internet. 
-              I'm a Computer Engineer with an interest in development. 
-              I love helping others by using my problem-solving skills in computer science. 
-              As a Computer Science student, I specialize in Full Stack Java Development. 
-              This website is my platform to contact me to build projects for you. Here, you can find blog posts,
-               a portfolio, services, and more. My mission is to provide services from my website
-               </p>
-            <div class="bnt-box">
-                <button class="btn-2" (click)="openInNewTab()">Send Email <i class="fa fa-envelope"></i></button>
-                <!-- <button class="btn-1" (click)="getAdmin()">Admin Work Space</button> -->
-
-            </div>
+<div class="hmskl">
+  <section class="home" id="home" aria-label="Hero section">
+    <div class="home-content">
+      <div class="home-container">
+        <p class="greeting">Welcome 👋</p>
+        <h1 class="hero-title">
+          I'm <span class="highlight">Shubham</span>
+          <br>
+          a Full Stack Software Developer
+        </h1>
+        <p class="hero-description">
+          Computer Engineer specializing in full-stack development. I build scalable applications using Java, Angular, and cloud technologies. Let's create something extraordinary together!
+        </p>
+        <div class="btn-box">
+          <button class="btn-primary" (click)="openInNewTab()" aria-label="Send email to Shubham for inquiries">
+            <i class="fa fa-envelope"></i> Send Email
+          </button>
+          <a href="#about" class="btn-secondary" aria-label="Navigate to about section">
+            <i class="fa fa-arrow-down"></i> Explore More
+          </a>
         </div>
-        <div class="img-box">
-            <img src="Skills/shubham3-rm.png">
-          </div>
-    </section>
-    <section class="skill" id="skill" *ngIf="admin">
+      </div>
+      <div class="img-box">
+        <div class="image-wrapper">
+          <img src="Skills/shubham3-rm.png" alt="Shubham - Full Stack Developer Profile Picture" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skill" id="skill" *ngIf="admin" aria-label="Technical skills section">
+    <div class="skills-shell">
       <app-frontend-skill></app-frontend-skill>
       <app-backend-skill></app-backend-skill>
       <app-database-skills></app-database-skills>
-    </section>
-     <section  id="skill" *ngIf="!admin">
-      
-    <app-login></app-login>
-    </section> 
+      <app-other-skills></app-other-skills>
+    </div>
+  </section>
 
-    <app-education></app-education>
-    <!-- <app-form></app-form> -->
-    <app-about></app-about>
-    <app-footer></app-footer>
-  </div>
-   
-</body>
-</html>
+  <section id="skill" *ngIf="!admin" aria-label="Authentication section">
+    <app-login></app-login>
+  </section>
+
+  <app-education></app-education>
+  <app-form></app-form>
+  <app-about></app-about>
+  <app-footer></app-footer>
+</div>

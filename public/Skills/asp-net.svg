@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">ASP.NET</title>
+  <desc id="desc">ASP.NET skill icon</desc>
+  <rect width="96" height="96" rx="18" fill="#512bd4"/>
+  <path fill="#fff" d="M22 63.5 36.8 28h6.8l14.9 35.5h-7.7l-3.2-8.2H32.7l-3.2 8.2H22Zm13.1-14.4h10.1L40.1 36l-5 13.1ZM61.1 63.5V28h13.4c6.9 0 11.5 4.3 11.5 10.7 0 6.5-4.6 10.7-11.5 10.7h-6.3v14.1h-7.1Zm7.1-20.1h5.7c3.2 0 5-1.7 5-4.7s-1.8-4.7-5-4.7h-5.7v9.4Z"/>
+  <circle cx="24" cy="72" r="4" fill="#00d4ff"/>
+  <circle cx="36" cy="72" r="4" fill="#00d4ff"/>
+  <circle cx="48" cy="72" r="4" fill="#00d4ff"/>
+</svg>
