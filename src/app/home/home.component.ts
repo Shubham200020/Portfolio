@@ -10,11 +10,12 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from "../login/login.component";
 import { OtherSkillsComponent } from "../other-skills/other-skills.component";
 import { FormComponent } from "../form/form.component";
+import { ProjectsComponent } from "../projects/projects.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FooterComponent, CommonModule, LoginComponent, OtherSkillsComponent, FormComponent],
+  imports: [NavBarComponent, FrontendSkillComponent, BackendSkillComponent, DatabaseSkillsComponent, AboutComponent, EducationComponent, FooterComponent, CommonModule, LoginComponent, OtherSkillsComponent, FormComponent, ProjectsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
